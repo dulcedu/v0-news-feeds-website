@@ -1,4 +1,4 @@
-import { Users } from "lucide-react"
+import { Users, Zap } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -32,6 +32,10 @@ export default function NewsletterCard({ title, description, topics, subscribers
           <div className="flex items-center text-gray-400">
             <Users className="h-4 w-4 mr-1" />
             <span className="text-sm">{formattedSubscribers} subscribers</span>
+          </div>
+          <div className="flex items-center text-yellow-400">
+            <Zap className="h-4 w-4 mr-1" />
+            <span className="text-sm">1,000 sats/month</span>
           </div>
         </div>
 

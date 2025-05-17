@@ -37,7 +37,7 @@ export default function NostrLoginOptions() {
       <TabsContent value="extension" className="space-y-4">
         <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 text-center">
           <Button
-            className="w-full bg-amber-600 hover:bg-amber-700 mb-4 h-12"
+            className="w-full bg-yellow-600 hover:bg-yellow-700 mb-4 h-12"
             onClick={() => console.log("Connect with Alby")}
           >
             <Wallet className="mr-2 h-5 w-5" />

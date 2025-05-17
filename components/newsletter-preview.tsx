@@ -50,7 +50,7 @@ export default function NewsletterPreview({ title, date, content, topics, creato
         <div className="bg-gray-800/50 p-3 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <h4 className="text-sm font-medium">Content Creators</h4>
-            <Button variant="ghost" size="sm" className="h-7 px-2 text-amber-400">
+            <Button variant="ghost" size="sm" className="h-7 px-2 text-yellow-400">
               <Zap className="h-3.5 w-3.5 mr-1" />
               Zap All
             </Button>
@@ -65,7 +65,7 @@ export default function NewsletterPreview({ title, date, content, topics, creato
                   <span className="text-sm">{creator.name}</span>
                   <span className="text-xs text-gray-500">{creator.npub}</span>
                 </div>
-                <Button variant="ghost" size="sm" className="h-6 px-2 text-amber-400">
+                <Button variant="ghost" size="sm" className="h-6 px-2 text-yellow-400">
                   <Zap className="h-3 w-3 mr-1" />
                   Zap
                 </Button>

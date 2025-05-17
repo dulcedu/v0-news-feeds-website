@@ -50,7 +50,7 @@ export default function CreatorCard({ name, npub, topics, subscribers, imageUrl 
               View
             </Button>
           </Link>
-          <Button variant="outline" className="border-amber-600 text-amber-400 hover:bg-amber-900/30">
+          <Button variant="outline" className="border-yellow-600 text-yellow-400 hover:bg-yellow-900/30">
             <Zap className="h-4 w-4" />
           </Button>
         </div>

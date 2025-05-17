@@ -8,19 +8,19 @@ export default function HeroSection() {
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
-      {/* Purple and amber glow effects */}
+      {/* Purple glow effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
 
       <div className="container relative mx-auto px-4 text-center">
-        <div className="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium rounded-full bg-gray-800 text-amber-400 border border-gray-700">
-          <span className="flex h-2 w-2 rounded-full bg-amber-500 mr-2"></span>
+        <div className="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium rounded-full bg-gray-800 text-yellow-400 border border-gray-700">
+          <span className="flex h-2 w-2 rounded-full bg-yellow-500 mr-2"></span>
           Powered by Nostr & Lightning Network
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 max-w-4xl mx-auto leading-tight font-helvetica">
           Your personalized{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-amber-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
             newsletter
           </span>{" "}
           from the Nostr network
@@ -49,7 +49,7 @@ export default function HeroSection() {
           <div className="bg-gray-800 border border-gray-700 rounded-xl shadow-2xl overflow-hidden">
             <img
               src="/placeholder.svg?height=600&width=1000"
-              alt="OneFeed dashboard preview"
+              alt="LastFeed dashboard preview"
               className="w-full h-auto"
             />
           </div>
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
           <div className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg max-w-[200px] hidden md:block">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+              <div className="w-3 h-3 rounded-full bg-purple-500"></div>
               <span className="text-sm font-medium">Lightning</span>
             </div>
             <p className="text-xs text-gray-400">Weekly analysis of Lightning Network growth and innovations</p>

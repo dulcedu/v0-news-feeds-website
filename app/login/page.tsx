@@ -1,10 +1,11 @@
 import Link from "next/link"
-import { ArrowLeft, CloudLightningIcon as Lightning, Newspaper } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import NostrLoginOptions from "@/components/nostr-login-options"
+import Logo from "@/components/logo"
 
 export default function Login() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
+    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col font-helvetica">
       <div className="container mx-auto px-4 py-8">
         <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -13,13 +14,10 @@ export default function Login() {
 
         <div className="max-w-md mx-auto">
           <div className="flex justify-center mb-6">
-            <div className="relative">
-              <Lightning className="h-12 w-12 text-amber-500 absolute -top-1 -right-1 transform rotate-12" />
-              <Newspaper className="h-12 w-12 text-purple-500" />
-            </div>
+            <Logo size="lg" />
           </div>
 
-          <h1 className="text-3xl font-bold mb-2 text-center">Login to OneFeed</h1>
+          <h1 className="text-3xl font-bold mb-2 text-center">Login to LastFeed</h1>
           <p className="text-gray-400 mb-8 text-center">
             Connect with your Nostr account to access personalized newsletters.
           </p>
@@ -43,7 +41,7 @@ export default function Login() {
           </p>
 
           <p className="text-center text-gray-400">
-            New to OneFeed?{" "}
+            New to LastFeed?{" "}
             <Link href="/signup" className="text-purple-400 hover:underline">
               Sign up
             </Link>

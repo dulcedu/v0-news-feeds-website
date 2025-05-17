@@ -1,37 +1,23 @@
 import Link from "next/link"
-import {
-  Bell,
-  Bookmark,
-  Home,
-  Settings,
-  Zap,
-  Plus,
-  Search,
-  Filter,
-  RefreshCw,
-  CloudLightningIcon as Lightning,
-  Newspaper,
-} from "lucide-react"
+import { Bell, Bookmark, Home, Settings, Zap, Plus, Search, Filter, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import NewsletterPreview from "@/components/newsletter-preview"
 import TopicSelector from "@/components/topic-selector"
+import Logo from "@/components/logo"
+import FrequencySelector from "@/components/frequency-selector"
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-gray-950 text-gray-100 font-helvetica">
       <div className="flex">
         {/* Sidebar */}
         <aside className="hidden md:flex flex-col w-64 border-r border-gray-800 h-screen sticky top-0">
           <div className="p-4 border-b border-gray-800">
             <Link href="/" className="flex items-center gap-2">
-              <div className="relative">
-                <Lightning className="h-6 w-6 text-amber-500 absolute -top-1 -right-1 transform rotate-12" />
-                <Newspaper className="h-6 w-6 text-purple-500" />
-              </div>
-              <span className="font-bold text-xl">OneFeed</span>
+              <Logo size="sm" />
             </Link>
           </div>
 
@@ -70,14 +56,14 @@ export default function Dashboard() {
           <div className="p-4 border-t border-gray-800">
             <div className="bg-gray-900 rounded-md p-4">
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center text-amber-400">
+                <div className="flex items-center text-yellow-400">
                   <Zap className="h-4 w-4 mr-1" />
                   <span className="font-medium">5,200 sats</span>
                 </div>
                 <Button
                   size="sm"
                   variant="outline"
-                  className="h-7 text-xs border-amber-500 text-amber-400 hover:bg-amber-950/30"
+                  className="h-7 text-xs border-yellow-500 text-yellow-400 hover:bg-yellow-950/30"
                 >
                   Top up
                 </Button>
@@ -110,7 +96,10 @@ export default function Dashboard() {
 
           <div className="p-6">
             <div className="mb-8">
-              <h2 className="text-xl font-bold mb-4">Your Topics</h2>
+              <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+                <h2 className="text-xl font-bold mb-4 md:mb-0">Your Topics</h2>
+                <FrequencySelector />
+              </div>
               <TopicSelector />
             </div>
 
@@ -233,7 +222,7 @@ export default function Dashboard() {
                       <p className="text-xs text-gray-400">npub1sat... • 3 new posts</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" className="text-amber-400">
+                  <Button variant="ghost" size="sm" className="text-yellow-400">
                     <Zap className="h-4 w-4 mr-1" />
                     Zap
                   </Button>
@@ -249,7 +238,7 @@ export default function Dashboard() {
                       <p className="text-xs text-gray-400">npub1nostr... • 1 new post</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" className="text-amber-400">
+                  <Button variant="ghost" size="sm" className="text-yellow-400">
                     <Zap className="h-4 w-4 mr-1" />
                     Zap
                   </Button>
@@ -257,15 +246,15 @@ export default function Dashboard() {
 
                 <div className="flex items-center justify-between p-3 bg-gray-900 border border-gray-800 rounded-lg">
                   <div className="flex items-center gap-3">
-                    <div className="bg-amber-900/30 w-10 h-10 rounded-md flex items-center justify-center">
-                      <span className="font-bold text-amber-400">L</span>
+                    <div className="bg-purple-900/30 w-10 h-10 rounded-md flex items-center justify-center">
+                      <span className="font-bold text-purple-400">L</span>
                     </div>
                     <div>
                       <h3 className="font-medium">Lightning Lucy</h3>
                       <p className="text-xs text-gray-400">npub1lucy... • 5 new posts</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" className="text-amber-400">
+                  <Button variant="ghost" size="sm" className="text-yellow-400">
                     <Zap className="h-4 w-4 mr-1" />
                     Zap
                   </Button>

@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "OneFeed - Customized Newsletters from Nostr",
+  title: "LastFeed - Nostr Newsletter Platform",
   description: "Get personalized, AI-generated newsletters based on your interests, curated from Nostr content.",
     generator: 'v0.dev'
 }
@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <head>
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/helvetica-neue-9" />
+      </head>
+      <body className={`${inter.className} font-helvetica`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

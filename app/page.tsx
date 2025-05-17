@@ -1,25 +1,19 @@
 import Link from "next/link"
-import { ArrowRight, Zap, Search, Filter, Newspaper, CloudLightningIcon as Lightning, Sparkles } from "lucide-react"
+import { ArrowRight, Search, Filter, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import HeroSection from "@/components/hero-section"
 import NewsletterCard from "@/components/newsletter-card"
 import CreatorCard from "@/components/creator-card"
 import TopicSelector from "@/components/topic-selector"
+import Logo from "@/components/logo"
+import FrequencySelector from "@/components/frequency-selector"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100">
+    <div className="min-h-screen bg-gray-950 text-gray-100 font-helvetica">
       <header className="container mx-auto py-6 px-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="relative">
-            <Lightning className="h-8 w-8 text-amber-500 absolute -top-1 -right-1 transform rotate-12" />
-            <Newspaper className="h-8 w-8 text-purple-500" />
-          </div>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-amber-500 bg-clip-text text-transparent">
-            OneFeed
-          </h1>
-        </div>
+        <Logo size="md" />
         <div className="hidden md:flex items-center gap-6">
           <Link href="/discover" className="hover:text-purple-400 transition-colors">
             Discover
@@ -47,7 +41,7 @@ export default function Home() {
         <HeroSection />
 
         <section className="container mx-auto py-12 px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">How OneFeed Works</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">How LastFeed Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
               <div className="bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
@@ -55,8 +49,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Choose Your Interests</h3>
               <p className="text-gray-400">
-                Select topics you're interested in or search for specific keywords. OneFeed will curate relevant content
-                from the Nostr network.
+                Select topics you're interested in or search for specific keywords. LastFeed will curate relevant
+                content from the Nostr network.
               </p>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
@@ -71,7 +65,7 @@ export default function Home() {
             </div>
             <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
               <div className="bg-purple-900/30 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                <Zap className="h-6 w-6 text-amber-400" />
+                <ArrowRight className="h-6 w-6 text-yellow-400" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Support Creators</h3>
               <p className="text-gray-400">
@@ -102,7 +96,10 @@ export default function Home() {
             <TopicSelector />
 
             <div className="mt-12">
-              <h2 className="text-3xl font-bold mb-8">Featured Newsletters</h2>
+              <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                <h2 className="text-3xl font-bold mb-4 md:mb-0">Featured Newsletters</h2>
+                <FrequencySelector />
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <NewsletterCard
                   title="Bitcoin Weekly"
@@ -170,7 +167,7 @@ export default function Home() {
         </section>
 
         <section className="container mx-auto py-16 px-4">
-          <div className="bg-gradient-to-r from-purple-900/40 to-amber-900/40 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-purple-900/40 to-purple-800/40 rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to simplify your content consumption?</h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -191,13 +188,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="relative">
-                  <Lightning className="h-6 w-6 text-amber-500 absolute -top-1 -right-1 transform rotate-12" />
-                  <Newspaper className="h-6 w-6 text-purple-500" />
-                </div>
-                <span className="text-xl font-bold">OneFeed</span>
-              </div>
+              <Logo className="mb-4" />
               <p className="text-gray-400 mb-4">
                 Customized newsletters from the Nostr network, powered by AI and Lightning.
               </p>
@@ -279,7 +270,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 mb-4 md:mb-0">© 2025 OneFeed. All rights reserved.</p>
+            <p className="text-gray-500 mb-4 md:mb-0">© 2025 LastFeed. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="#" className="text-gray-400 hover:text-purple-400">
                 Terms
